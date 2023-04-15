@@ -3,7 +3,7 @@ function getComputerChoice() {
     /* this Math.random function generatees a random number between 0 and 1 here 
      we  have set our conddition according to that here and Math.floor Rounds off to ther nearest decimal number  */
     let randomnumber = Math.random();
-    console.log(randomnumber);
+    // console.log(randomnumber);
     if (randomnumber <= 0.33)
         return 'Rock';
     else if (randomnumber > 0.33 && randomnumber <= 0.66)
@@ -19,10 +19,10 @@ function getUserChoice() {
     let userChoice = entry;
     return userChoice;
 }
-let a = getComputerChoice(); // convert;
-let b = getUserChoice();
-console.log(a);
-console.log(b);
+// let a = getComputerChoice(); // convert;
+// let b = getUserChoice();
+// console.log(a);
+// console.log(b);
 
 function value(a) {
     if (a.toLowerCase() === 'rock') {
@@ -39,10 +39,10 @@ function value(a) {
     }
 }
 
-let computer = value(a);
-let user = value(b);
-console.log(computer);
-console.log(user);
+// let computer = value(a);
+// let user = value(b);
+// console.log(computer);
+// console.log(user);
 
 function Result(computer, user) {
     if (computer === user) {
@@ -69,5 +69,19 @@ function Result(computer, user) {
     }
 
 }
+// console.log(Result(computer, user));
 
-console.log(Result(computer, user));
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let p = getUserChoice();
+        let q = getComputerChoice();
+        console.log(p);
+        console.log(q);
+        let a = value(p);
+        let b = value(q);
+        console.log(Result(p,q));
+    }
+}
+game();
+
