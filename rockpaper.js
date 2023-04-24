@@ -17,31 +17,41 @@ function getComputerChoice() {
         return 'Scissor';
 }
 const game = function () {
+    const container=document.querySelector('#container');
     const buttons = document.querySelectorAll('button');
+    const Comp=document.querySelector('.Comp');
+    const User=document.querySelector('.User');
+
+    
+
     buttons.forEach((button) => {
+
+        
 
         // and for each one we add a 'click' listener
         button.addEventListener('click', (e) => {
+
             let Compchance = getComputerChoice().toLowerCase();
             let UserChance = e.target.textContent.toLowerCase();
             console.log(`UserChoice: ${UserChance} and Compchance: ${Compchance}`);
 
-            game: {
-                if (Compchance === UserChance) {
-                    console.log(`Match Draw As Both Same `);
-                }
-                else if ((UserChance === 'rock' && Compchance === 'scissor') || (UserChance === 'paper' && Compchance === 'rock') || (UserChance === 'scissor' && Compchance === 'paper')) {
-                    UserCount++;
-                    console.log(`User Win Computer Lost `);
-                }
-                else if ((UserChance === 'rock' && Compchance === 'paper') || (UserChance === 'paper' && Compchance === 'scissor') || (UserChance === 'scissor' && Compchance === 'rock')) {
-                    ComputerCount++;
-                    console.log(`Computer Win User Lost `);
-                }
-            }
 
-            console.log(UserCount);
-            console.log(ComputerCount);
+            if (Compchance === UserChance) {
+                console.log(`Match Draw As Both Same `);
+            }
+            else if ((UserChance === 'rock' && Compchance === 'scissor') || (UserChance === 'paper' && Compchance === 'rock') || (UserChance === 'scissor' && Compchance === 'paper')) {
+                UserCount++;
+                console.log(`User Win Computer Lost `);
+            }
+            else if ((UserChance === 'rock' && Compchance === 'paper') || (UserChance === 'paper' && Compchance === 'scissor') || (UserChance === 'scissor' && Compchance === 'rock')) {
+                ComputerCount++;
+                console.log(`Computer Win User Lost `);
+            }
+        
+            Comp.textContent=  `Computer Score is ${ComputerCount}`;
+            User.textContent=  `User Score is ${UserCount}`;
+           
+
 
         });
     });
