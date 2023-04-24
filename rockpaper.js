@@ -14,7 +14,7 @@ function getComputerChoice() {
 }
 const game = function () {
     const container=document.querySelector('#container');
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('img');
     const Comp=document.querySelector('.Comp');
     const User=document.querySelector('.User');
     buttons.forEach((button) => {
@@ -22,7 +22,7 @@ const game = function () {
         button.addEventListener('click', (e) => {
 
             let Compchance = getComputerChoice().toLowerCase();
-            let UserChance = e.target.textContent.toLowerCase();
+            let UserChance = e.target.alt.toLowerCase();
             if (Compchance === UserChance) {
             }
             else if ((UserChance === 'rock' && Compchance === 'scissor') || (UserChance === 'paper' && Compchance === 'rock') || (UserChance === 'scissor' && Compchance === 'paper')) {
@@ -32,7 +32,7 @@ const game = function () {
                 ComputerCount++;
             }
             let choice=document.querySelector('.choice');
-            choice.textContent=`User: ${UserChance}   Computer:${Compchance}`;
+            choice.textContent=`User Selected  ${UserChance}   and            Computer Selected ${Compchance}  `;
             Comp.textContent=  `Computer Score is ${ComputerCount}`;
             User.textContent=  `User Score is ${UserCount}`;
            
