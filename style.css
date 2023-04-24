@@ -1,4 +1,3 @@
-*{
-    background-image: url('./Images/minimalism-rock-paper-scissors-wallpaper-preview.jpg');
-    
+.main,#container,.choice,.Score,h1,#Result,.res{
+    border: 2px solid black;
 }
