@@ -13,10 +13,10 @@ function getComputerChoice() {
         return 'Scissor';
 }
 const game = function () {
-    const container=document.querySelector('#container');
+    const container = document.querySelector('#container');
     const buttons = document.querySelectorAll('img');
-    const Comp=document.querySelector('.Comp');
-    const User=document.querySelector('.User');
+    const Comp = document.querySelector('.Comp');
+    const User = document.querySelector('.User');
     buttons.forEach((button) => {
         // and for each one we add a 'click' listener
         button.addEventListener('click', (e) => {
@@ -31,33 +31,29 @@ const game = function () {
             else if ((UserChance === 'rock' && Compchance === 'paper') || (UserChance === 'paper' && Compchance === 'scissor') || (UserChance === 'scissor' && Compchance === 'rock')) {
                 ComputerCount++;
             }
-            let choice=document.querySelector('.choice');
-            choice.textContent=`User Selected  ${UserChance}   and            Computer Selected ${Compchance}  `;
-            Comp.textContent=  `Computer Score is ${ComputerCount}`;
-            User.textContent=  `User Score is ${UserCount}`;
-           
+            let choice = document.querySelector('.choice');
+            choice.innerHTML = `<p>User Selected  ${UserChance} <br> and <br> Computer Selected ${Compchance}</p>`;
+            Comp.textContent = `Computer Score is ${ComputerCount}`;
+            User.textContent = `User Score is ${UserCount}`;
+
 
 
         });
     });
 
 }
-const Result=function()
-{
-    const result= document.querySelector('#Result');
-    const res= document.querySelector('.res');
-    result.addEventListener('click', ()=>{
-        if(UserCount>ComputerCount)
-        {
-            res.textContent=`User Win by ${UserCount-ComputerCount} points to Computer`;
+const Result = function () {
+    const result = document.querySelector('#Result');
+    const res = document.querySelector('.res');
+    result.addEventListener('click', () => {
+        if (UserCount > ComputerCount) {
+            res.textContent = `User Win by ${UserCount - ComputerCount} points to Computer`;
         }
-        else  if(UserCount<ComputerCount)
-        {
-            res.textContent=`Computer  Wins by ${ComputerCount-UserCount} points to User`;
+        else if (UserCount < ComputerCount) {
+            res.textContent = `Computer  Wins by ${ComputerCount - UserCount} points to User`;
         }
-        else
-        {
-            res.textContent=`Game Tied with both Computer and User having ${UserCount} points.`;
+        else {
+            res.textContent = `Game Tied with both Computer and User having ${UserCount} points.`;
         }
     })
 }
