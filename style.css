@@ -346,9 +346,58 @@ img {
         font-size: 3.3vh;
     }
     .res{
-        font-size:3.7vh;
+        font-size:3vh;
     }
     .choice{
         font-size: 3.5vh;
+    }
+    html{
+        height:100em;
+    }
+    .container{
+        margin: 20px;
+    }
+    .main{
+        height: 100em;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .middle{
+        display: flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items: center;
+    }
+    .main{
+        display: block;
+        margin: 5px;
+    }
+    .res,#Result{
+        border: Solid violet 2px;
+    }
+    body{
+        height: fit-content;
+    }
+    #Result{
+        width:10%;
+        margin-left: 45%;
+        margin-right: 50%;
+    }
+    .res{
+        width:fit-content;
+    }
+    .results{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    html{
+        height: fit-content;
+    }
+    .main{
+        height: fit-content;
     }
 }
