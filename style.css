@@ -356,6 +356,10 @@ img {
         align-items: center;
 
     }
+   .paper{
+    height: 109px;
+    width: 109px;
+   }
 }
 
 @media only screen and (min-width: 992px) {
@@ -416,6 +420,10 @@ img {
     .wallpaper{
      background-color:rgb(28, 181, 236);
     }
+    .paper{
+        width: 200px;
+        height: 200px;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .middle{
@@ -452,4 +460,8 @@ img {
     .main{
         height: fit-content;
     }
+  .paper{
+    height: 200px;
+    width: 200px;
+  }
 }
