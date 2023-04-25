@@ -149,6 +149,10 @@ h1 {
 .bck {
     background-repeat: no-repeat;
 }
+.paper{
+    width: 200px;
+    height: 200px;
+}
 
 img {
     width: 200px;
